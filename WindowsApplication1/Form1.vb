@@ -57,9 +57,11 @@ Public Class Form1
             Next
             If line.Substring(150, 5) = "00401" Then
                 TextBox1.Text = "4010"
-
+            ElseIf line.Substring(150, 5) = "010~S" Then
+                TextBox1.Text = "4010"
             ElseIf line.Substring(150, 5) = "X*005" Then
                 TextBox1.Text = "5010"
+
             Else
                 TextBox1.Text = line.Substring(150, 5)
             End If
